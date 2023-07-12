@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" title="Coding design">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Superartemis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sideBar.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../img/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Superartemis</span>
+                    <span class="profession">Artemis</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="../categorias/categoria.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Categorias</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../empleados/empleado.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Empleados</span>
+                        </a>
+                    </li>
+                    <li class="nav-link active">
+                        <a href="cliente.html">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Clientes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../productos/producto.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Productos</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="btnAdd">
+    <button type="button" class="addCategory" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <span class="addCategory__text">Add</span>
+        <span class="addCategory__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+    </button>
+    </div>
+
+    <!-- Modal Insertar -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5 modaltitulo" id="exampleModalLabel">Agregar Cliente</h1>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post" class="formularios" id="formCliente">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Compañia: </label>
+                        <input type="text" class="form-control" id="compania" placeholder="Ingrese compañia">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Contacto: </label>
+                        <input type="text" class="form-control" id="contacto" placeholder="Ingrese contacto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Titulo: </label>
+                        <input type="text" class="form-control" id="titulo" placeholder="Ingrese titulo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Direccion: </label>
+                        <input type="text" class="form-control" id="direccion" placeholder="Ingrese direccion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Ciudad: </label>
+                        <input type="text" class="form-control" id="ciudad" placeholder="Ingrese ciudad">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnForm" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="input" class="btn btn-primary btnForm">Add</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Update -->
+    <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5 modaltitulo" id="exampleModalLabel">Editar Cliente</h1>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post" class="formularios" id="formEditCliente">
+                    <input type="hidden" id="idEdit" name="">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Compañia: </label>
+                        <input type="text" class="form-control" id="companiaEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Contacto: </label>
+                        <input type="text" class="form-control" id="contactoEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Titulo: </label>
+                        <input type="text" class="form-control" id="tituloEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Direccion: </label>
+                        <input type="text" class="form-control" id="direccionEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Ciudad: </label>
+                        <input type="text" class="form-control" id="ciudadEdit">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnForm" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="input" class="btn btn-primary btnForm">Actualizar</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <main>
+
+    </main>
+
+ 
+</body>
+    <script src="../js/sideBar.js"></script>
+    <script src="./clientes.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
